@@ -1,0 +1,20 @@
+<h1>Editing roaster</h1>
+
+<% form_for(@roaster) do |f| %>
+  <%= f.error_messages %>
+
+  <p>
+    <%= f.label :developers %><br />
+    <%= f.text_field :developers %>
+  </p>
+  <p>
+    <%= f.label :date %><br />
+    <%= f.date_select :date %>
+  </p>
+  <p>
+    <%= f.submit 'Update' %>
+  </p>
+<% end %>
+
+<%= link_to 'Show', @roaster %> |
+<%= link_to 'Back', roasters_path %>

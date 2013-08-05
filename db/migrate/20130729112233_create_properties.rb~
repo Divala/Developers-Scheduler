@@ -1,0 +1,13 @@
+class CreateProperties < ActiveRecord::Migration
+  def self.up
+    create_table :property do |t|
+      t.text :property
+
+      t.timestamps
+    end
+  end
+
+  def self.down
+    drop_table :property
+  end
+end

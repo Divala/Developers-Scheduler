@@ -1,0 +1,11 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Scheduler</title>
+</head>
+<body style="background-color:grey">
+<a href="http://localhost:3000/names"><b>Administration</b></a>
+</body>
+</html>
+
+

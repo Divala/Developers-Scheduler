@@ -1,0 +1,3 @@
+class OfficialController < ApplicationController
+end
+

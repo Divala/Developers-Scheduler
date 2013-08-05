@@ -1,0 +1,18 @@
+<p>
+  <b>Property:</b>
+  <%=h @property.property %>
+</p>
+
+<p>
+  <b>Value:</b>
+  <%=h @property.value %>
+</p>
+
+<p>
+  <b>Description:</b>
+  <%=h @property.description %>
+</p>
+
+
+<%= link_to 'Edit', edit_property_path(@property) %> |
+<%= link_to 'Back', properties_path %>

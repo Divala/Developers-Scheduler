@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Scheduler</title>
+
+<style>
+ .container {
+   background-color: white;
+ }
+
+ .list td {
+   border-style: solid;
+   width: 99%;
+ }
+    
+</style>
+
+</head>
+<body style="background-color:brown">
+
+<div class="container">
+
+<table class="list">
+  <tr>
+    <th style="text-align: left;">Developers</th>
+    <th>Date</th>
+  </tr>
+  <%(@people_hash || {}).each do |key, developers| %>
+    <tr>
+      <td><%=developers.join('<br />')%></td>
+      <td>&nbsp;</td>
+    </tr>
+  <%end%>
+</table>
+
+</div><br>
+<button onclick="window.location='/static/index'">Back</button><br>
+
+
+</body>
+</html>

@@ -1,0 +1,34 @@
+<style>
+ .container {
+   padding-left: 20px;
+   background-color: blue;
+ }
+
+</style>
+
+
+<h1>Listing properties</h1>
+
+<table>
+  <tr>
+    <th>Property</th>
+    <th>Value</th>
+    <th>Description</th>
+  </tr>
+
+<% @properties.each do |property| %>
+  <tr>
+    <td><%=h property.property %></td>
+    <td><%=h property.value %></td>
+    <td><%=h property.description %></td>
+    <td><%= link_to 'Show', property %></td>
+    <td><%= link_to 'Edit', edit_property_path(property) %></td>
+    <td><%= link_to 'Destroy', property, :confirm => 'Are you sure?', :method => :delete %></td>
+  </tr>
+<% end %>
+</table>
+
+<br />
+
+<%= link_to 'New property', new_property_path %><br>
+<button onclick="window.location='/admin/login'">Back</button><br>

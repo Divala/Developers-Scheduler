@@ -1,0 +1,35 @@
+<style>
+ .container {
+   padding-left: 20px;
+   background-color: white;
+ }
+</style>
+
+
+<h1>Listing names</h1>
+
+<div class="container">
+
+<table class="names">
+  <tr>
+    <th>First name</th>
+    <th>Surname</th>
+  </tr>
+
+<% @names.each do |name| %>
+  <tr>
+    <td><%=h name.first_name %></td>
+    <td><%=h name.surname %></td>
+    <td><%= link_to 'Show', name %></td>
+    <td><%= link_to 'Edit', edit_name_path(name) %></td>
+    <td><%= link_to 'Destroy', name, :confirm => 'Are you sure?', :method => :delete %></td>
+  </tr>
+<% end %>
+</table>
+
+<br />
+
+<%= link_to 'New name', new_name_path %><br>
+<button onclick="window.location='/admin/login'">Back</button><br>
+
+</div>
